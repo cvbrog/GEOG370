@@ -12,47 +12,47 @@
     <p>After (downloading and) uploading the natural earth data as a vector layer to a new project in QGIS, I then ran the Indicatrix mapper, a plug-in downloaded before I began the assignment. Voila! I could then edit the layers in map view, so I picked contrasting colors for the layer elements via editing symbology. To apply different map projections, I changed the EPSG by selecting different options under Project Properties, and then Preferred Coordinate Reference System. Once a new map projection appeared, I created a new print layout to add the map plus titles, and then exported the maps as a .png. Once I got into the hang of it, I toyed with all types of map projections; anyone else dreaming about maps? </p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Horizontally stretched circles in the indicatrix are the most stretched toward the poles. This tells me the area is distorted around the poles - as evidenced by a whopping Antarctica and Greenland - and that area is preserved at the equator.</h3>
+    <h3>Horizontally stretched circles - indicatrices - are the most stretched toward the poles. This tells me that area is distorted around the poles - as evidenced by a whopping Antarctica and Greenland - and that area is preserved at the equator.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>While the circles are all relatively similar in shape and size, indicating that area and shape are only relatively distored, circles in the farthest right and left corners of the map are significantly squashed, thus distortion increases. The circles at the top and bottom of the map are also much closer together, implying angles are distorted to be closer. </h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
     <h2>Pseuo Mercator</h2>
-    <h3>Some observations</h3>
+    <h3>All of the circles on the map are actually circles; angles are preserved, though shape is distorted. Circles at the top and bottom of the map are are several times larger than circles along the equator, so area increases toward the poles, like in the WGS84 projection. </h3>
     <a href="./maps/EPSG3857.png">
     <img src="./maps/EPSG3857.png" alt="3857" width='500px'>
     </a>
     <h2>Sphere Winkel 1</h2>
-    <h3>Some observations</h3>
+    <h3>Area is relatively well preserved in this projection, considering that all the circles are roughly the same size, though their shapes are elongated and bent the most at the farthest longitude lines on the east and west ends of the map. Like the Aitoff projection, the circles' similar size and shape suggests the goal of this projection is to minimize distortion of area, shape, and angles. </h3>
     <a href="./maps/EPSG_53018.png">
     <img src="./maps/EPSG_53018.png" alt="53018" width='500px'>
     </a>
     <h2>World Cylindrical Equal Area</h2>
-    <h3>Some observations</h3>
+    <h3>This map is much wider than previous projections. Large, long ellipses at the poles indicate area is also stretched east and west, though area and angles are relatively less distorted at the equator. </h3>
     <a href="./maps/EPSG_54034.png">
     <img src="./maps/EPSG_54034.png" alt="54034" width='500px'>
     </a>
     <h2>World Equidistant Conic</h2>
-    <h3>Some observations</h3>
+    <h3>Cheers to the first conic projection of this series! Circles are arranged in a concentric pattern, and they are widest and shortest (most compressed) along the outermost circular parallel, which borders Antarctica. The continent makes up nearly the entire outer border of this projection; its area is grossly distorted. Angles are also distored, especially near the center of the map where, though shape is well preserved, several continents are crammed together. </h3>
     <a href="./maps/EPSG_54027.png">
     <img src="./maps/EPSG_54027.png" alt="54027" width='500px'>
     </a>
     <h2>North Pole Azimuthal Equidistant</h2>
-    <h3>Some observations</h3>
+    <h3>Nearly identical to the preceding projection, this map portrays Antarctica as one contiguous body, whereas the former maintains a larger gap between both ends of the continent.</h3>
     <a href="./maps/EPSG_102016.png">
     <img src="./maps/EPSG_102016.png" alt="102016" width='500px'>
     </a>
     <h2>NAD 1927 State Plane Hawaii 1 FIPS 5101</h2>
-    <h3>Some observations</h3>
+    <h3>Super cool projection: a quick Google search tells me NAD27 was primarily used for early USGS topographic maps. The islands of Hawai'i are anchored at the center of the map. Circles closest/along this center parallel that falls over the islands are the same shape and size, though angles are distorted. Area and shape is much more distorted toward east Asia and South America, which is enormous (and looks like a surrealist painting). </h3>
     <a href="./maps/EPSG_26761.png">
     <img src="./maps/EPSG_26761.png" alt="26761" width='500px'>
     </a>
     <h2>World Azimuthal Equidistant</h2>
-    <h3>Some observations</h3>
+    <h3>Area and shape is well preserved at the equator closest to the very center of the map. Latitudes below and above the equator show circles arranged in circular patterns that narrow near the poles, where area is best preserved closest to that center longitudinal line. In other words, area is most distorted to the far right and left of the map, and angles are most distored at the highest and lowest latitudes. </h3>
     <a href="./maps/EPSG_54032.png">
     <img src="./maps/EPSG_54032.png" alt="54032" width='500px'>
     </a>
