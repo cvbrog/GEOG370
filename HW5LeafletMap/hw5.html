@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UNC - Brogden</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    
+   <script src="./datahw5/hurston_hall.geojson"></script>
+
+   <script src="datahw5/sloane.geojson"></script>
+
+   <script src="datahw5/campus_y.geojson"></script>
+
+   <script src="datahw5/wilson.geojson"></script>
+
 </head>
 <body>
     
+    <div id="mapid"></div>
+    <style>
+         #mapid{ width: 900px; height: 500px;}
+    </style>
+
+<script>
+    var map = L.map('mapid').setView([35.91, -79.05], 16);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'}).addTo(map)
+    
+    //L.geoJSON(hurston).addTo(map)
+    var hurstonIcon = L.icon({
+            iconUrl: "https://i.pinimg.com/originals/fa/1d/41/fa1d415f3164b87c4ab9078fb3258646.jpg",
+            iconSize: [30,30],
+            popupAnchor: [0,0]
+        });
+
+        var hurstonPopup = "Hurston Hall<br/><img src='https://snworksceo.imgix.net/dth/df7fe809-54ae-4014-97fe-e6ae2a996b99.sized-1000x1000.JPG?w=800'width='150px'/>";
+    
+        L.geoJSON(hurston, { 
+        pointToLayer: function (feature, latlng) { 
+        return L.marker(latlng, {icon: hurstonIcon});}}) 
+        .bindPopup(hurstonPopup)
+        .addTo(map); 
+
+     //L.geoJSON(campusy).addTo(map)
+     var campusyIcon = L.icon({
+            iconUrl: "https://pbs.twimg.com/profile_images/771037057565294592/9TYc6Mxo_400x400.jpg",
+            iconSize: [30,30],
+            popupAnchor: [0,0]
+        });
+
+        var campusyPopup = "Missing the Campus Y. <3<br/><img src='https://carolinaconnection.org/wp-content/uploads/2016/10/Meantime-Coffee-Company.jpg'width='150px'/>";
+    
+        L.geoJSON(campusy, { 
+        pointToLayer: function (feature, latlng) { 
+        return L.marker(latlng, {icon: campusyIcon});}}) 
+        .bindPopup(campusyPopup)
+        .addTo(map); 
+
+
+     //L.geoJSON(sloane).addTo(map)
+     var sloaneIcon = L.icon({
+            iconUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Sloane_Art_Library.jpg",
+            iconSize: [30,30],
+            popupAnchor: [0,0]
+        });
+
+        var sloanePopup = "Check out the purple tentacles at Sloane!<br/><img src='https://lh3.googleusercontent.com/proxy/UybrNbxoDIFCiYD_Y3TOHVjQmxLndg38Zig6fDQettyc7YGCE1_eLmAioiGJD8NN8gAvA4TWbjuuRe_yfpJJ5ytViyyGh_P8qjB51ucfBop5pnQmSPADr3Dbad7A'width='150px'/>";
+    
+        L.geoJSON(sloane, { 
+        pointToLayer: function (feature, latlng) { 
+        return L.marker(latlng, {icon: sloaneIcon});}}) 
+        .bindPopup(sloanePopup)
+        .addTo(map); 
+
+   //L.geoJSON(wilson).addTo(map)
+   var wilsonIcon = L.icon({
+            iconUrl: "https://unchistory.web.unc.edu/files/2017/11/Modern-Wilson-624x416.png",
+            iconSize: [30,30],
+            popupAnchor: [0,0]
+        });
+
+        var wilsonPopup = "Wilson Reading Room<br/><img src='https://d3m7xw68ay40x8.cloudfront.net/assets/2015/02/27192350/wilson-1.jpg'width='150px'/>";
+    
+        L.geoJSON(wilson, { 
+        pointToLayer: function (feature, latlng) { 
+        return L.marker(latlng, {icon: wilsonIcon});}}) 
+        .bindPopup(wilsonPopup)
+        .addTo(map); 
+</script>
+
 </body>
 </html>
