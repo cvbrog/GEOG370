@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaneohe, Hawai'i</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+</head>
+<h1>Kāne'ohe, Hawai'i</h1>
+<body>
+     <div id="mapid"></div>
+    <style>
+         #mapid{ width: 1000px; height: 500px;}
+    </style>
+
+<script>
+    var map = L.map('mapid').setView([21.405577, -157.792185], 14);
+
+    var BaseMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+    }).addTo(map);
+
+    var Kaneohe = L.tileLayer('./datahw6/{z}/{x}/{y}.png', {
+        minZoom: 12,
+        maxZoom: 16,
+        tms: false,
+        attribution: 'USGS'
+    }).addTo(map);
+
+    var leleuaPopup = "Significant single family and apartment housing developments in the past four decades characterize growth around the Hawaiian State Memorial Park, Oahu's military cemetery. Leleua is one such development. <br/><img src='https://static.trulia-cdn.com/pictures/thumbs_5/zillowstatic/IS2rp0vrnn71dg1000000000.jpg'width='150px'/>"
+    
+    var leleuaIcon = L.icon({
+            iconUrl: "https://icons.iconarchive.com/icons/froyoshark/enkel/512/VLC-icon.png",
+            iconSize: [30,30],
+            popupAnchor: [0,0]
+        });
+
+    var daddioPopup = "My dad moved to Hawai'i with is mom and sisters in 1976, two years after this USGS aerial image was taken. The apartment he spent his elementary school years living in was likely constructed in '75 or '76. <br/><img src= 'https://cdn.hawaii.house/images_properties/45552-alokahi-place-kaneohe_201617732_6.jpg?id=201607031220'width='150px'/>"
+
+    var daddioIcon = L.icon({
+            iconUrl: "https://www.advanceuk.org/uploaded_files/1404/images/generic-home-scheme-logo.png",
+            iconSize: [30,30],
+            popupAnchor: [0,0]
+        });
+    
+    var windwardPopup = "Windward Mall, constructed in 1982, currently operates as a major shopping center in town. In the midst of the pandemic, the outdoor space of the mall hosts a weekly farmer's market for local vendors. (The mall itself is located across the street from Longs Drugs, a pharmacy my dad remembers from childhood.<br/><img src='https://media.bizj.us/view/img/1549131/windward-mallsignage*750xx900-506-0-47.jpg'width='150px'/>"
+
+    var windwardIcon = L.icon({
+        iconUrl: "https://www.shareicon.net/data/512x512/2016/06/30/788741_commerce_512x512.png",
+        iconSize: [30,30],
+        popupAnchor: [0,0]
+    });
+
+    var Leleua = L.marker([21.393335, -157.793779], {
+        icon: leleuaIcon,
+    pointToLayer: function (feature, latlng) {
+    return L.marker(latlng);}})
+    .bindPopup(leleuaPopup) 
+    .addTo(map);
+
+    var Daddio = L.marker([21.396384, -157.793168], {
+        icon: daddioIcon,
+    pointToLayer: function(feature, latlng) {
+    return L.marker(latlng);}})
+    .bindPopup(daddioPopup)
+    .addTo(map);
+
+    var NewMall = L.marker([21.419780, -157.805113], {
+        icon: windwardIcon,
+    pointToLayer: function(feature, latlng) {
+    return L.marker(latlng);}})
+    .bindPopup(windwardPopup)
+    .addTo(map);
+
+    
+    var Tiles = {
+        "ESRI: World Street Map": BaseMap,
+        "Kaneohe 1974 Aerial Imagery": Kaneohe
+    }
+
+    var Markers = {
+        "Leleua Housing Development": Leleua,
+        "Dad's Old Home": Daddio,
+        "Windward Mall": NewMall
+    }
+
+    L.control.layers(Tiles, Markers).addTo(map);
+</script>
+<h4>Tile layer for Kaneohe 1974 aerial imagery attained from USGS; georeferenced using 2006 USGS high resolution orthographic imagery also from USGS.</h4>
+</body>
+</html>
