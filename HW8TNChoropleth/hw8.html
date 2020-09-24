@@ -8,20 +8,24 @@
 <body>
 <h1>Homework 8: Tennessee Choropleths, 3 Ways </h1>
 <h2>Caroline Brogden</h2>
-<h4>The following maps represent Census data describing the quantity of people aged 25 and older with a bachelor's degree or higher out of the total population of people aged 25 and older in Tennessee in 2018. Because the data provide information about educational attainment across predetermined age categorizations (18-24 years, 25+, etc.) and not out of an estimated total TN population, this normalization describes a percentage of a universe value. A quick Google search pulls up underwhelming statistics about Tennessee's lacking educational achievement ranking nationally; I am interested in educational outcomes in this neighboring southern state.  </h4>
+<h4>The following maps represent Census data describing the quantity of people aged 25 and older with a bachelor's degree or higher out of the total population of people aged 25 and older in Tennessee in 2018 per 100 people. Because the data provide information about educational attainment across predetermined age categorizations (18-24 years, 25+, etc.) and not out of an estimated total TN population, this normalization describes a percentage of a universe value. A quick Google search pulls up underwhelming statistics about Tennessee's lacking educational achievement ranking nationally; I am interested in educational outcomes in this neighboring southern state.  </h4>
 <h3>Map 1</h3>
 <!-- Your map goes here -->
 <a href="./equal_interval.png">
     <img src="./equal_interval.png" alt="Tennesee 2018 Normalized Educational Attainment Map Equal Interval" width='500px'>
     </a><br />
-<h4>Text here!</h4>
+<h4>In the equal interval choropleth, each interval is a 10% range. Equal range sizes makes reading the map easier because it presents clear, legible breaks. At the same time, the classification presents a potentially misleading, stark contrast between a handful of counties vs. an overrepresented majority of counties.</h4>
+<h3>Map 2</h3>
 <a href="./natural_breaks.png">
     <img src="./natural_breaks.png" alt="Tennesee 2018 Normalized Educational Attainment Map Natural Breaks" width='500px'>
      </a><br />
+<h4>Natural breaks hint at the distribution of data in a way that Map 1 (equal intervals) may gloss over. More accurate trends emerge from an analysis of this map. A potential downside, however, is that the natural breaks are specific to this ratio, which may make complicate comparing other educational attainment data sets.</h4>
 
+<h3>Map 3</h3>
 <a href="./quartile.png">
     <img src="./quartile.png" alt="Tennesee 2018 Normalized Educational Attainment Map Quartile" width='500px'>
     </a><br />
+<h4>Quantiles break up the data in a way that tells us, according to this map, that there very few counties where the studied population makes up less than 14% of the total population of that age range; this is good information to have, but this classification could be problematic in policy making, for instance, because the counties with darker shading includes a much more disparate range of educational attainment. </h4>
 <!-- Link to your shapefile in Github and you CSV -->
 <h2>Data used for this project</h2>
     <a href="./cleaned_2019v.csv"> CSV dataset </a>
