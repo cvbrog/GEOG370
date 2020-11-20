@@ -257,12 +257,14 @@ var northgate = L.marker([36.021313, -78.897823], {
     return L.marker(latlng);}})
     .bindPopup(northgatePopup) 
     .addTo(map);
+    
 var colonial = L.marker([36.023115, -78.884351], {
         icon: aidIcon,
     pointToLayer: function (feature, latlng) {
     return L.marker(latlng);}})
     .bindPopup(colonialPopup) 
     .addTo(map);
+
 var bragg = L.marker([36.035647, -78.891729], {
         icon: aidIcon,
     pointToLayer: function (feature, latlng) {
