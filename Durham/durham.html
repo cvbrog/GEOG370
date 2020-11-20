@@ -29,12 +29,38 @@
     })
     .addTo(map);
 
-//Icons and Popups
+//Popup: Farmers Market
     var CIPPopup = "East Durham Farmer's Market hosted by Communities in Partnership. Next no-contact pickup on Saturday, Dec. 19 from 9am-12pm. 706 Gilbert St, Durham, NC 27701 <br/><img src='https://images.squarespace-cdn.com/content/5d5c173bf0260a0001d6bde9/1593197923410-Y8FWM2X8R8AYI4UGDGDA/EASTDURLOGO.png?content-type=image%2Fpng'width='100px'/>";
+//Popups: Eat Nc
+    var hotelPopup = "The Durham Hotel, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var beyuPopup = "Beyú Caffé, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var southernPopup = "Southern Harvest Hospitality Group, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var chickenPopup = "Chicken Hut, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var germanPopup = "Guglhupf, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var mateoPopup = "Mateo Bar de Tapas, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var tratPopup = "Mothers & Sons Trattoria, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var monutPopup = "Monuts, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var dashiPopup = "Dashi, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var saltPopup = "Saltbox Seafood Joint, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var spicyPopup = "Spicy Green Gourmet, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var dosPopup = "Dos Perros participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var boricuaPopup = "Boricua Soul, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var soulyPopup = "Souly Good Vegan Café, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var sweetiesPopup = "Sweeties Southern & Vegan Catering, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var eastPopup = "East Bake Shop Durham, participant in FEAST NC. Now permanently closed. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var ninthPopup = "Ninth Strett Bakery, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var jujuPopup = "Juju Durham, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var vinPopup = "Vin Rouge, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var jackPopup = "Jack Tar and The Colonel’s Daughter, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var cocoPopup = "Cocoa Cinnamon, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+    var wavesPopup = "Little Waves Coffee Roasters, participant in FEAST NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+
+//Popups: Mutual Aid  
     var northgatePopup = "Text here <br/><img src='https://durhammutualaid.org/wp-content/uploads/2020/09/North-Durham-mutual-aid-image-1024x442.jpg?189db0&189db0'width='100px'/>";
-    var hotelPopup = "The Durham Hotel, participant in Eat NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
+//Popups: Shuttle    
     var buenPopup = "El Buen Pastor site for Inter-faith Food Shuttle Mobile Market. 1st Saturday of each month from 9:30 am-10:30 am at 1852 Liberty St, Durham, 27703. <br/><img src='https://images.squarespace-cdn.com/content/586d2398579fb3ccd8c1dfe5/1525113486991-8MCACJB5TTQLZFZMJR5E/IFFS_Social_ProfilePic.jpg?content-type=image%2Fjpeg'width='50px'/>";
-    
+
+//Icons  
     var CIPIcon = L.icon({
             iconUrl: "https://upload.wikimedia.org/wikipedia/commons/1/11/Pan_Green_Circle.png",
             iconSize: [15,15],
@@ -57,7 +83,7 @@
         popupAnchor: [0,0]
     });
 
-//Markers!
+//Farmers Markets
 var CIP = L.marker([35.995749, -78.890210], {
         icon: CIPIcon,
     pointToLayer: function (feature, latlng) {
@@ -65,6 +91,7 @@ var CIP = L.marker([35.995749, -78.890210], {
     .bindPopup(CIPPopup) 
     .addTo(map);
 
+//Eat NC
 var Hotel = L.marker([35.997261, -78.900907], {
         icon: eatIcon,
     pointToLayer: function (feature, latlng) {
@@ -72,6 +99,7 @@ var Hotel = L.marker([35.997261, -78.900907], {
     .bindPopup(hotelPopup) 
     .addTo(map);
 
+//Mutual Aid
 var northgate = L.marker([36.021313, -78.897823], {
         icon: aidIcon,
     pointToLayer: function (feature, latlng) {
@@ -79,6 +107,7 @@ var northgate = L.marker([36.021313, -78.897823], {
     .bindPopup(northgatePopup) 
     .addTo(map);
 
+//Shuttle
 var buen = L.marker([35.989898, -78.868619], {
         icon: shuttleIcon,
     pointToLayer: function (feature, latlng) {
