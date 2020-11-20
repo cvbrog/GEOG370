@@ -55,10 +55,7 @@
     var cocoPopup = "Cocoa Cinnamon, participant in FEAST NC, now EAT NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
     var wavesPopup = "Little Waves Coffee Roasters, participant in FEAST NC, now EAT NC. <br/><img src='https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng'width='50px'/>";
 
-//Popups: Mutual Aid  
-    var northgatePopup = "Northgate Park (approx.). Neighborhood serviced by North Durham Mutual Aid. More info at: https://durhammutualaid.org/north/. <br/><img src='https://durhammutualaid.org/wp-content/uploads/2020/09/North-Durham-mutual-aid-image-1024x442.jpg?189db0&189db0'width='100px'/>";
-    var colonialPopup = "Colonial Village (approx.). Neighborhood serviced by North Durham Mutual Aid. More info at: https://durhammutualaid.org/north/. <br/><img src='https://durhammutualaid.org/wp-content/uploads/2020/09/North-Durham-mutual-aid-image-1024x442.jpg?189db0&189db0'width='100px'/>";
-    var braggPopup = "Braggtown (approx.). Neighborhood serviced by North Durham Mutual Aid. More info at: https://durhammutualaid.org/north/. <br/><img src='https://durhammutualaid.org/wp-content/uploads/2020/09/North-Durham-mutual-aid-image-1024x442.jpg?189db0&189db0'width='100px'/>";
+
 
 //Popups: Shuttle    
     var buenPopup = "Iglesia Episcopal El Buen Pastor, site for Inter-faith Food Shuttle Mobile Market. 1st Saturday of each month from 9:30 am-10:30 am at 1852 Liberty St, Durham, 27703. Call Ingrid Nunez for more information at (919) 885-2315. <br/><img src='https://images.squarespace-cdn.com/content/586d2398579fb3ccd8c1dfe5/1525113486991-8MCACJB5TTQLZFZMJR5E/IFFS_Social_ProfilePic.jpg?content-type=image%2Fjpeg'width='50px'/>";
@@ -76,11 +73,7 @@
         iconSize: [10,10],
         popupAnchor:[0,0]
     });
-    var aidIcon = L.icon({
-        iconUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Red_Circle%28small%29.svg/1200px-Red_Circle%28small%29.svg.png",
-        iconSize: [10,10],
-        popupAnchor:[0,0]
-    });
+    
     var shuttleIcon = L.icon({
         iconUrl: "https://upload.wikimedia.org/wikipedia/commons/b/be/Yellow_Circle.png",
         iconSize: [10,10],
@@ -248,28 +241,6 @@ var waves = L.marker([35.986489, -78.927399], {
     pointToLayer: function (feature, latlng) {
     return L.marker(latlng);}})
     .bindPopup(wavesPopup) 
-    .addTo(map);
-
-//Mutual Aid
-var northgate = L.marker([36.021313, -78.897823], {
-        icon: aidIcon,
-    pointToLayer: function (feature, latlng) {
-    return L.marker(latlng);}})
-    .bindPopup(northgatePopup) 
-    .addTo(map);
-
-var colonial = L.marker([36.023115, -78.884351], {
-        icon: aidIcon,
-    pointToLayer: function (feature, latlng) {
-    return L.marker(latlng);}})
-    .bindPopup(colonialPopup) 
-    .addTo(map);
-
-var bragg = L.marker([36.035647, -78.891729], {
-        icon: aidIcon,
-    pointToLayer: function (feature, latlng) {
-    return L.marker(latlng);}})
-    .bindPopup(braggPopup) 
     .addTo(map);
 
 
