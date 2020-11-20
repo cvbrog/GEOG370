@@ -262,6 +262,12 @@ var buen = L.marker([35.989898, -78.868619], {
     return L.marker(latlng);}})
     .bindPopup(buenPopup) 
     .addTo(map);
+var comm = L.marker([35.997407, -78.909165], {
+        icon: shuttleIcon,
+    pointToLayer: function (feature, latlng) {
+    return L.marker(latlng);}})
+    .bindPopup(commPopup) 
+    .addTo(map);
 </script>
 </body>
 </html>
