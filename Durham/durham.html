@@ -18,7 +18,7 @@
 <body>
      <div id="mapid"></div>
     <style>
-         #mapid{ width: 1000px; height: 500px;}
+         #mapid{ width: 1000px; height: 700px;}
     </style>
 
 <script>
@@ -29,6 +29,22 @@
     })
     .addTo(map);
 
+//Icons and Popups
+    var CIPPopup = "East Durham Farmer's Market hosted by Communities in Partnership. Next no-contact pickup on Saturday, Dec. 19 from 9am-12pm./>"
+    
+    var CIPIcon = L.icon({
+            iconUrl: "https://images.squarespace-cdn.com/content/5d5c173bf0260a0001d6bde9/1593197923410-Y8FWM2X8R8AYI4UGDGDA/EASTDURLOGO.png?content-type=image%2Fpng",
+            iconSize: [30,30],
+            popupAnchor: [0,0]
+        });
+
+//Markers!
+var CIP = L.marker([35.995749, -78.890210], {
+        icon: CIPIcon,
+    pointToLayer: function (feature, latlng) {
+    return L.marker(latlng);}})
+    .bindPopup(CIPPopup) 
+    .addTo(map);
 </script>
 </body>
 </html>
