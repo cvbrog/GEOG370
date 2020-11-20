@@ -34,9 +34,25 @@
     
     var CIPIcon = L.icon({
             iconUrl: "https://images.squarespace-cdn.com/content/5d5c173bf0260a0001d6bde9/1593197923410-Y8FWM2X8R8AYI4UGDGDA/EASTDURLOGO.png?content-type=image%2Fpng",
-            iconSize: [30,30],
+            iconSize: [40,40],
             popupAnchor: [0,0]
         });
+    
+    var eatIcon = L.icon({
+        iconUrl: "https://images.squarespace-cdn.com/content/5f44db2e05a2d515e011bf9f/1598608932691-O4CKYJ1SJBF4LWLHX941/EatNC_logo_MKC_Web_800_ColorLogo.png?format=1000w&content-type=image%2Fpng",
+        iconSize: [40,40],
+        popupAnchor:[0,0]
+    });
+    var aidIcon = L.icon({
+        iconUrl: "https://durhammutualaid.org/wp-content/uploads/2020/09/North-Durham-mutual-aid-image-1024x442.jpg?189db0&189db0",
+        iconSize: [40,40],
+        popupAnchor:[0,0]
+    });
+    var shuttleIcon = L.icon({
+        iconUrl: "https://images.squarespace-cdn.com/content/586d2398579fb3ccd8c1dfe5/1525113486991-8MCACJB5TTQLZFZMJR5E/IFFS_Social_ProfilePic.jpg?content-type=image%2Fjpeg",
+        iconSize: [40,40],
+        popupAnchor: [0,0]
+    });
 
 //Markers!
 var CIP = L.marker([35.995749, -78.890210], {
@@ -44,6 +60,13 @@ var CIP = L.marker([35.995749, -78.890210], {
     pointToLayer: function (feature, latlng) {
     return L.marker(latlng);}})
     .bindPopup(CIPPopup) 
+    .addTo(map);
+
+var Hotel = L.marker([35.997261, -78.900907], {
+        icon: eatIcon,
+    pointToLayer: function (feature, latlng) {
+    return L.marker(latlng);}})
+    //.bindPopup(hotelPopup) 
     .addTo(map);
 </script>
 </body>
