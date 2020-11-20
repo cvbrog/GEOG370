@@ -45,7 +45,7 @@
     });
     var aidIcon = L.icon({
         iconUrl: "https://durhammutualaid.org/wp-content/uploads/2020/09/North-Durham-mutual-aid-image-1024x442.jpg?189db0&189db0",
-        iconSize: [40,40],
+        iconSize: [60,40],
         popupAnchor:[0,0]
     });
     var shuttleIcon = L.icon({
@@ -69,7 +69,7 @@ var Hotel = L.marker([35.997261, -78.900907], {
     //.bindPopup(hotelPopup) 
     .addTo(map);
 
-var northgate = L.marker([35.997261, -78.900907], {
+var northgate = L.marker([36.021313, -78.897823], {
         icon: aidIcon,
     pointToLayer: function (feature, latlng) {
     return L.marker(latlng);}})
