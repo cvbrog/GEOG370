@@ -24,11 +24,10 @@
 <script>
     var map = L.map('mapid').setView([35.997540, -78.902017], 15);
 
-    L.tileLayer('https://{s}.tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=<your apikey>', {
-	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    apikey: '<your apikey>',
-    }).addTo(map);
+    var tileUrl = 'https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=<insert-your-apikey-here>',
+    layer = new L.TileLayer(tileUrl, {maxZoom: 18});
 
+    map.addLayer(layer);
 
 </script>
 </body>
