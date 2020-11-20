@@ -69,21 +69,21 @@ var Hotel = L.marker([35.997261, -78.900907], {
         icon: eatIcon,
     pointToLayer: function (feature, latlng) {
     return L.marker(latlng);}})
-    //.bindPopup(hotelPopup) 
+    .bindPopup(hotelPopup) 
     .addTo(map);
 
 var northgate = L.marker([36.021313, -78.897823], {
         icon: aidIcon,
     pointToLayer: function (feature, latlng) {
     return L.marker(latlng);}})
-    //.bindPopup(northgatePopup) 
+    .bindPopup(northgatePopup) 
     .addTo(map);
 
 var buen = L.marker([35.989898, -78.868619], {
         icon: shuttleIcon,
     pointToLayer: function (feature, latlng) {
     return L.marker(latlng);}})
-    //.bindPopup(buenPopup) 
+    .bindPopup(buenPopup) 
     .addTo(map);
 </script>
 </body>
